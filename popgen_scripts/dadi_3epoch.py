@@ -35,6 +35,7 @@ ll_model = dadi.Inference.ll_multinom(model, fs)
 ll_data=dadi.Inference.ll_multinom(fs, fs)
 theta = dadi.Inference.optimal_sfs_scaling(model, fs)
 
+#scale parameters
 Nanc=theta / (4*mu*L)
 nuB_scaled_dip=popt[0]*Nanc
 nuF_scaled_dip=popt[1]*Nanc
@@ -43,8 +44,11 @@ TF_scaled_gen=popt[3]*2*Nanc
 scaled_param_names=("Nanc_FromTheta_scaled_dip","nuB_scaled_dip","nuF_scaled_dip","TB_scaled_gen","TF_scaled_gen")
 scaled_popt=(Nanc,nuB_scaled_dip,nuF_scaled_dip,TB_scaled_gen,TF_scaled_gen)
 scaled_popt_str='\t'.join(str(x) for x in scaled_popt)
+
+#print and plot residuals
 print("ll",ll_model,popt,"scaled",scaled_popt)
 dadi.Plotting.plot_1d_comp_multinom(model, fs)
+<<<<<<< HEAD
 
 
 
@@ -54,3 +58,5 @@ java -jar msms.jar msms 36 1 -N 1757732.40914425 -t 382.48257222979 -r 28123.718
 
 
 msstats=/usr/local/bin/libsequence/examples/msstats
+=======
+>>>>>>> 63c7950825a744a2e29f781da3c59a0bf2968558
