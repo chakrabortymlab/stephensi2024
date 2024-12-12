@@ -1,3 +1,4 @@
+# bottlegrowth:Instantaneous size change followed by exponential growth.
 # script for running dadi to fit a bottlegrowth demographic model 
 # to the SFS of synonymous SNPs from the Trivandrum population.
 # Was run 100 times, parameters from run with highest likelihood
@@ -25,7 +26,9 @@ lower_bound = [1e-4, 1e-4, 1e-5]
 p0 = [0.01,0.1,0.005] # initial parameters
 
 maxiter=100
+# Make the extrapolating version of our demographic model function.
 func_ex = dadi.Numerics.make_extrap_log_func(func)
+#perturb parameters
 p0 = dadi.Misc.perturb_params(p0, fold=1, upper_bound=upper_bound, lower_bound=lower_bound)
 #run optimization
 popt = dadi.Inference.optimize_log(p0, fs, func_ex, pts_l, lower_bound=lower_bound,upper_bound=upper_bound,verbose=len(p0), maxiter=maxiter)
@@ -42,10 +45,10 @@ nuF_scaled_dip=popt[1]*Nanc
 T_scaled_gen=popt[2]*2*Nanc  
 scaled_popt=(Nanc,nuB_scaled_dip,nuF_scaled_dip,T_scaled_gen)
 scaled_popt_str='\t'.join(str(x) for x in scaled_popt)
-print("ll",ll_model,popt,"scaled",scaled_popt)
 
-#create plot
-#dadi.Plotting.plot_1d_comp_multinom(model, fs)
+#print and plot residuals
+print("ll",ll_model,popt,"scaled",scaled_popt)
+dadi.Plotting.plot_1d_comp_multinom(model, fs)
 
 
 

@@ -1,6 +1,6 @@
 #Script used for ABC inference of time since esterase duplication sweep
 #in the Trivandrum population
-#script adapted from Ormond et al. 2016
+#script adapted from Ormond et al. 2015
 
 #bottle-growth model parameters inferred by dadi
 #effective population size
