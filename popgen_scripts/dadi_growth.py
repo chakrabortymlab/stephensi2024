@@ -2,6 +2,8 @@
 # script for running dadi to fit a growth demographic model 
 # to the SFS of synonymous SNPs from the Trivandrum population.
 
+#Author:Alex Samano 2024
+
 import dadi
 from dadi import Numerics, PhiManip, Integration, Spectrum, Demographics1D
 

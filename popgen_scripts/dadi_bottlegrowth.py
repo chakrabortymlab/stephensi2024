@@ -4,6 +4,7 @@
 # Was run 100 times, parameters from run with highest likelihood
 # were used for ABC simulations and estimating selection coefficients.
 
+#Author: Alex Samano 2024
 
 import dadi
 from dadi import Numerics, PhiManip, Integration, Spectrum, Demographics1D

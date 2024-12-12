@@ -1,6 +1,8 @@
 #script used to convert population snp data in vcf format to 
 #input files for SweepFinder2, then run SW2
 
+#Author: Alex Samano 2024
+
 #remove indels and keep only chr2,3,X
 vcftools --remove-indels --minQ 20 --recode --chr chr2 --chr chr3 --chr chrX --vcf tvm_wild_04012023.vcf --out tvm_X23_onlysnps_filtered
 #get snp allele counts
