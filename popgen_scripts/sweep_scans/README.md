@@ -1,4 +1,4 @@
-#sweep_scans
+# sweep_scans
 
 hapstats_commands.txt: Commands to convert a multi-sample VCF with population SNP data into the proper input file for the SelectionHapStats pipeline (Garud 2015, Harris 2018), as well as msms command for neutral simulations to determine significance threshold.
 
