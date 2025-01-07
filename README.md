@@ -3,6 +3,7 @@ This repository contains scripts and intermediate data objects to reproduce the 
 
 Please go to the relevant subdirectory for scripts and intermediate data objects to reproduce the analysis reported in the manuscript.
 
+
 variants: Scripts and commands for generating variant calls (SVs and SNPs), filtering and merging VCFs, and further analysis of SV data. 
 
 popgen_scripts: Scripts and commands used for demographic inference, sweep scans, and population structure analysis and simulations.

@@ -30,7 +30,7 @@ def filter_data(data, min_non_missing=90):
 def compute_sfs(data):
     sfs = []
     for row in data:
-        genotypes = row[2:]  # assuming genotypes start at column 10
+        genotypes = row[2:]  
         allele_counts = {'0': 0, '1': 0}  # count of each genotypes
 
         for genotype in genotypes:
