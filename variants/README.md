@@ -10,4 +10,4 @@ sv_enrichment_analysis: Commands and data used to perform enrichment analysis of
 
 agam_asteph_synteny.sh: Alignment An. gambiae and An. stephensi genomes (chrX,2,3) to identify syntenic regions, then identify SVs within these syntenic blocks. 
 
-simulate_missing_genotypes: Script for simulating missing genotypes in SNP data to evaluate effect on SFS of non-synonymous site frequency spectrum.
+simulate_missing_genotypes: Script for simulating missing genotypes in SNP data to evaluate effect on non-synonymous site frequency spectrum.
